@@ -100,8 +100,6 @@ function displayLaws() {
     addLawButton.style.display = isEditingEnabled ? 'inline-block' : 'none';
     editButton.style.display = isEditingEnabled ? 'none' : 'inline-block';
     saveButton.style.display = isEditingEnabled ? 'inline-block' : 'none';
-
-    editButton.disabled = laws.length === 0;
 }
 
 function displayRules(lawIndex, rules, ruleList) {
