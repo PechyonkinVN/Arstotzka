@@ -135,15 +135,15 @@ function generateRuleElement(rule, rowIndex, ruleIndex, lawIndex, isEditingEnabl
         displayValue = rule.country ? rule.country : 'Arstotzka';
     } else if (ruleType === 'visa') {
         if (rule.visa === undefined) {rule.visa = true;}
-        displayValue = rule.visa === 'false' ? 'виза не нужна' : 'виза нужна';
+        displayValue = rule.visa === 'false' ? "isn't needed" : 'is needed'
         rule.visaRequired = rule.visa;
     } else if (ruleType === 'idCard') {
         if (rule.idCard === undefined) {rule.idCard = true;}
-        displayValue = rule.idCard === 'false' ? 'личная карта не нужна' : 'личная карта нужна';
+        displayValue = rule.idCard === 'false' ? "isn't needed" : 'is needed';
         rule.idCardRequired = rule.idCard;
     } else if (ruleType === 'workPermit') {
         if (rule.workPermit === undefined) {rule.workPermit = true;}
-        displayValue = rule.workPermit === 'false' ? 'разрешение на работу не нужно' : 'разрешение на работу нужно';
+        displayValue = rule.workPermit === 'false' ? "isn't needed" : 'is needed'
         rule.workPermitRequired = rule.workPermit;
     }
 
@@ -155,7 +155,7 @@ function generateRuleElement(rule, rowIndex, ruleIndex, lawIndex, isEditingEnabl
         if (ruleType === 'country') {
             html += `<select onchange="updateRule(${lawIndex}, ${rowIndex}, ${ruleIndex}, 'country', this.value)">${availableCountries.map(country => `<option value="${country}" ${rule.country === country ? 'selected' : ''}>${country}</option>`).join('')}</select>`;
         } else if (ruleType === 'visa' || ruleType === 'idCard' || ruleType === 'workPermit') {
-            html += `<select onchange="updateRule(${lawIndex}, ${rowIndex}, ${ruleIndex}, '${ruleType.replace('Permit','Required')}', this.value)"><option value="true" ${rule[ruleType.replace('Permit','Required')] === 'true' ? 'selected' : ''}>Да</option><option value="false" ${rule[ruleType.replace('Permit','Required')] === 'false' ? 'selected' : ''}>Нет</option></select>`;
+            html += `<select onchange="updateRule(${lawIndex}, ${rowIndex}, ${ruleIndex}, '${ruleType.replace('Permit','Required')}', this.value)"><option value="true" ${rule[ruleType.replace('Permit','Required')] === 'true' ? 'selected' : ''}>Yes</option><option value="false" ${rule[ruleType.replace('Permit','Required')] === 'false' ? 'selected' : ''}>No</option></select>`;
         }
     }
     html += `</div>`;

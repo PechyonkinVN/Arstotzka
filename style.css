@@ -147,11 +147,11 @@ header li img{
     flex-direction: column;
     justify-content:space-around;
     align-items: center;
-    border: 2px solid #555;
-    padding: 10px;
-    width: 400px;
+    border: 0.6vw solid #555;
+    padding: 2vw;
+    width: 40vw;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 0.5vw;
 }
 
 .law h3 {
@@ -192,14 +192,23 @@ header li img{
 }
 
 .rule-block {
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin-right: 10px;
+    border: 0.3vw solid #ccc;
+    padding: 0.3vw;
+    margin-right: 2vw;
     flex-grow: 1;
-    width: 200px;
+    width: 24vw;
+    height: 6.4vw;
     box-sizing: border-box;
-}
+    font-size: 1.5vw;
 
+}
+.rule-block label{
+    margin: 0.4vw;
+}
+.rule-block select{
+    font-size: 2vw;
+    font-family: "BM";
+}
 
 .delete-button,
 .delete-row-button {
@@ -227,9 +236,19 @@ header li img{
 #ruleTypeModalContent {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
+    padding: 2vw;
     border: 1px solid #888;
-    width: 300px;
+    width: 35vw;
+}
+
+#ruleTypeModalContent p{
+    font-size: 3vw;
+    margin: 2vw 0;
+    text-align: center;
+}
+
+#ruleTypeModalContent button{
+    margin: 1vw;
 }
 
 .close {
