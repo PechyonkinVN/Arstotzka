@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Grestin Border Checkpoint</title>
+        <link rel="icon" href="Arstotzka.ico" type="image/x-icon">
+        <link href="style.css" rel="stylesheet">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo_container">
+                <div id="back">
+                </div>
+                <nav>
+                    <div class="logo">
+                        <ul>
+                            <li>
+                                <a id="logo_name">Arstotzka</a>
+                            </li>
+                            <li>
+                                <a id="logo_other">Rules</a>
+                            </li>
+                            <li>
+                                <div>
+                                    <a id="logo_account" onclick="ChangeMode()">Administrator</a>
+                                    <div id="user">
+                                        <img src="Resources/admin.jpg"  onclick="Music()" id="user_img">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <audio id="audio" src="Resources/Theme.mp3" loop></audio>
+            </div>
+        </header>
+        <main>
+            <section id="hat">
+                <div id="logo">
+                    <img src="Resources/Arstotzka.gif">
+                </div>
+            </section>
+            <hr/>
+            <section id="info"> 
+                <div id="lawsContainer"></div>
+                <div id="ruleTypeModal">
+                    <div id="ruleTypeModalContent">
+                        <span class="close" onclick="closeRuleTypeModal()">&times;</span>
+                        <p>Выберите тип правила:</p>
+                        <button onclick="selectRuleType('country')">Страна</button>
+                        <button onclick="selectRuleType('visa')">Виза</button>
+                        <button onclick="selectRuleType('idCard')">Личная карта</button>
+                        <button onclick="selectRuleType('workPermit')">Разрешение на работу</button>
+                        <button onclick="closeRuleTypeModal()">Close</button>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <button id="addLaw">Add Law</button>
+                    <button id="editButton">Edit</button>
+                    <button id="saveButton">Save</button>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+                <script src="base.js"></script>
+            </section>
+            <hr/>
+            <section id="info_img">
+                <div id="back">
+                    <img src="Resources/Arstotzka.gif">
+                </div>
+            </section>
+            <hr/>
+            <section id="tips">
+                <h3>Tips</h3>
+                <p>Check the authenticity of the documents before passing them across the border.</p>
+                <img src="Resources/tips.png">
+            </section>
+            <hr/>
+            <section id="contact">
+                <div id="end">
+                    <img src="Resources/Arstotzka.gif">
+                </div>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
